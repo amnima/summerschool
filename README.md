@@ -11,6 +11,9 @@ git pull https://github.com/csc-training/summerschool.git
 
 Versions from previous years can be found in tags.
 
+
+here is the first line that i am writin!!!!!
+
 ## Exercises
 
  - [General instructions](exercise-instructions.md)
@@ -23,3 +26,6 @@ Versions from previous years can be found in tags.
 ---
 ## Notes
 - [x] Have fun!
+
+
+some new!!!i!
