@@ -6,7 +6,6 @@ void fibonacci(int *array)
     int f0, f1, f2;
     f0 = 0;
     f1 = 1;
-    printf("%d\n%d\n", f0, f1);
     f2 = f0 + f1;
     for (i=0;i<20;i++) {
         //printf("%d\n", f2);
