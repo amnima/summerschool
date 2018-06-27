@@ -13,10 +13,12 @@ int main(void)
     int i, j, error_code;
     double array[NX][NY];
     double laplacian[NX][NY];
+    double  dy=0.01;
+    double  dx=0.01;
 
     // First initalize the inner values to zero
-    for (i = 1; i < NX - 2; i++) {
-        for (j = 1; j < NY - 2; j++) {
+    for (i = 1; i < NX - 1; i++) {
+        for (j = 1; j < NY - 1; j++) {
             array[i][j] = 0.0;
         }
     }
@@ -41,10 +43,17 @@ int main(void)
     }
 
     // Evaluate the Laplacian
-    // *INDENT-OFF*
-#error Add the missing part
+    for (i=1;i<NX-1;i++)
+	    for (j=1;j<NY-1;j++){
+		    laplacian[i][j] = 
+			    ((array[i-1][j]-2*array[i][j]+array[i+1][j])/(dx*dx))
+			  + ((array[i][j-1]-2*array[i][j]+array[i][j+1])/(dy*dy));
+	    }
 
-    // *INDENT-ON*
+      for (i = 0;i<NX;i++)
+            for (j=0;j<NY;j++){
+		    printf("%f",laplacian[i][j]);
+	    }
 
     // Call the png writer routine
     error_code = save_png((double *) laplacian, NX, NY, "datastructures_functions_heat-a_b.png", 'c');
