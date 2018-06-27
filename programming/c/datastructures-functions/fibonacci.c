@@ -4,7 +4,6 @@ void fibonacci(int *array)
 {
     int i;
     int f0, f1, f2;
-    //int array[20];
     f0 = 0;
     f1 = 1;
     printf("%d\n%d\n", f0, f1);
@@ -23,11 +22,9 @@ void fibonacci(int *array)
 
 void dummy(int *a, int *b)
 {
-	int var;
 	int constant = 1;
 	*a +=constant;
 	*b +=constant;
-	
 }
 
 
@@ -40,7 +37,7 @@ int main(int argc, char *argv[],int *array[])
     int i;
     int a=10,b=20;
 
-    // initialize necessary array elements and write the for loop
+    // the function fibonacci take care of calculating the first 20 elements of fibonacci array
 
     fibonacci(&f[0]);
     printf("First 20 Fibonacci numbers are:\n");
@@ -49,6 +46,7 @@ int main(int argc, char *argv[],int *array[])
     }
     printf("\n");
 
+    // adding one value to two different pointers
      dummy(&a,&b);
      printf("the final results are:\n%d\t%d\n ",a,b);
 
