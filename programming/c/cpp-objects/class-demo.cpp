@@ -7,6 +7,13 @@ public:
 
   // TODO: add here the member function
   //       described in the exercise
+  void add()
+  {
+	  int c;
+	  c = a+b;
+	  printf("this is the sum:%i \n",c);
+  }
+  void print_a() const {printf("a and b are %i \t %i\n",a,b);};
   
 };
 
@@ -18,6 +25,8 @@ int main(void)
 
   // TODO: add here a call to the member
   //       function
+  demo.print_a();
+  demo.add();
   
   return 0;
 }
