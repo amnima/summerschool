@@ -10,7 +10,8 @@ void laplacian(new_data *field)
       
     int i, j;
     double laplacian[NX][NY];
-    //double array[NX][NY];
+   
+
     // First initalize the inner values to zero
     for (i = 1; i < NX - 1; i++) {
         for (j = 1; j < NY - 1; j++) {
@@ -68,7 +69,7 @@ int main()
 	new_data field;
 	laplacian(&field);
 
-
+        return 0;
 }
 
 
